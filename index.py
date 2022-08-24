@@ -1,5 +1,6 @@
+#For search information on the API
 import requests
-
+#Create Windows notification
 from win10toast import ToastNotifier
 
 filename = 'epic_games.ico'
