@@ -5,11 +5,13 @@ from win10toast import ToastNotifier
 #Timeout before making a request to the API
 import time
 
+#Recheck for new games
 def recheck_game():
     #In 10 seconds I will double check if you have already redeemed the game.
     time.sleep(10)
     check_game()
 
+#Send first game notification
 def send_notification1():
     print("Send first game notification")
     #Icon file
@@ -20,6 +22,7 @@ def send_notification1():
     with open('game1.txt', 'w') as f:
         f.write(current_games_title1)
 
+#Send second game notification
 def send_notification2():
     print("Send second game notification")
     #Icon file
@@ -31,7 +34,7 @@ def send_notification2():
         f.write(current_games_title2)
     recheck_game()
 
-
+#Check game and if there are new games send the notification
 def check_game():
     print("Connect to the api")
     url = "https://api.plenusbot.xyz/epic_games?country=IT"
@@ -57,5 +60,4 @@ def check_game():
     else:
         print("Send notification for second game")
         send_notification2()
-
 check_game()
