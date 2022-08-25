@@ -2,7 +2,7 @@
 import requests
 #Create Windows notification
 from win10toast import ToastNotifier
-
+#Timeout before making a request to the API
 import time
 
 def recheck_game():
