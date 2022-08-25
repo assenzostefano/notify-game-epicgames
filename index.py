@@ -29,6 +29,7 @@ def send_notification2():
     toast.show_toast(title="New games!", msg="The new game is: " + current_games_title2 , icon_path=filename,duration=10,threaded=False)
     with open('game2.txt', 'w') as f:
         f.write(current_games_title2)
+    recheck_game()
 
 
 def check_game():
