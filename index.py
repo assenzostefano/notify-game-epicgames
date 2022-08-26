@@ -34,6 +34,7 @@ def send_notification2():
         f.write(current_games_title2)
     check_game3()
 
+#Check if there is the third free game
 def check_game3():
     #Check third game
     try:
@@ -56,10 +57,11 @@ def send_notification3():
     filename = 'epic_games.ico'
     #Create notification on Windows
     toast = ToastNotifier()
-    toast.show_toast(title="New games!", msg="The new game is: " + current_games_title2 , icon_path=filename,duration=10,threaded=False)
+    toast.show_toast(title="New games!", msg="The new game is: " + current_games_title3 , icon_path=filename,duration=10,threaded=False)
     with open('game3.txt', 'w') as f:
         f.write(current_games_title3)
     recheck_game()
+
 
 #Check game and if there are new games send the notification
 def check_game():
