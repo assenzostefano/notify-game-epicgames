@@ -25,3 +25,4 @@ pip install -r requirements.txt
 ```console
 python index.py
 ```
+### ONLY WORKS ON WINDOWS 10 AND 11!
